@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Shanthipriya\AppData\Local\Temp\testng-eclipse--1526743997\testng-customsuite.xml</span>
+                    <span>C:\Users\Shanthipriya\AppData\Local\Temp\testng-eclipse-1523990800\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -107,6 +107,20 @@
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Default_suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="runnerFile.TestRunnerClass" class="method navigator-link" hash-for-method="runScenario(&quot;Successful login with valid credentials&quot;, &quot;User Login Functionality&quot;)">runScenario("Successful login with valid credentials", "User Login Functionality")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -130,14 +144,11 @@
                   </a> <!-- runScenario("Successful login with valid credentials", "User Login Functionality") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Successful login with valid credentials","User Login Functionality")</span>
-                  <div class="stack-trace">java.io.FileNotFoundException: C:\Users\Shanthipriya\OneDrive\Documents\GitHub\Selenium-Automation\mavensample\src\main\resources (Access is denied)
-	at java.base/java.io.FileInputStream.open0(Native Method)
-	at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
-	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:152)
-	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:106)
-	at coreUtils.BaseClass.launchWebsite(BaseClass.java:24)
-	at stepDefinition.LoginPageStepDef.user_navigates_to_loginpage(LoginPageStepDef.java:17)
-	at ✽.User navigates to loginpage(file:///C:/Users/Shanthipriya/OneDrive/Documents/GitHub/Selenium-Automation/mavensample/src/test/resources/Feature/LoginPage.feature:8)
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebElement.getText()&quot; because &quot;element&quot; is null
+	at coreUtils.SeleniumHelper.getTextFromAnElement(SeleniumHelper.java:116)
+	at pageObjects.HomePage.verifyStaticText(HomePage.java:31)
+	at stepDefinition.LoginPageStepDef.User_lands_in_homepage(LoginPageStepDef.java:55)
+	at ✽.User lands in homepage(file:///C:/Nithya/Selenium-Automation/mavensample/src/test/resources/Feature/LoginPage.feature:12)
 
 </div> <!-- stack-trace -->
                   <em>
@@ -146,10 +157,28 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">runnerFile.TestRunnerClass</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Successful login with valid credentials&quot;, &quot;User Login Functionality&quot;)">
+                  </a> <!-- runScenario("Successful login with valid credentials", "User Login Functionality") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Successful login with valid credentials","User Login Functionality")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Shanthipriya\AppData\Local\Temp\testng-eclipse--1526743997\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Shanthipriya\AppData\Local\Temp\testng-eclipse-1523990800\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -206,16 +235,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'runnerFile.TestRunnerClass')
-data.setCell(0, 3, 268);
+data.setCell(0, 3, 15959);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'runScenario')
+data.setCell(1, 2, 'runnerFile.TestRunnerClass')
+data.setCell(1, 3, 15627);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 268 ms</span>
+              <span class="suite-total-time">Total running time: 31 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -243,20 +276,22 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">runnerFile.TestRunnerClass</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@54067fdc)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@19d53ab4)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Successful login with valid credentials", "User Login Functionality")</span>
+                <span class="method-start">939 ms</span>
+              </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">runScenario("Successful login with valid credentials", "User Login Functionality")</span>
-                <span class="method-start">789 ms</span>
+                <span class="method-start">16570 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">1063 ms</span>
+                <span class="method-start">32534 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

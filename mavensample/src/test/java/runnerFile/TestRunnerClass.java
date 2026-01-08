@@ -7,7 +7,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 @CucumberOptions(
 		//Attributes to configure cucumber connectivity
 		features = "src/test/resources/Feature", // Path to your feature files
-	    glue = "stepDefinition",    // Package where your step definitions are located
+	    glue = {"stepDefinition", "Hooks"},    // Package where your step definitions are located
 	    plugin = { "pretty",
 	            "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"   }, // Reporting options
 	    monochrome = true,       // Readable console output
